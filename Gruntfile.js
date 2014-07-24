@@ -67,29 +67,82 @@ module.exports = function(grunt) {
       }
     },
 
-    // STATIC SITE COMPILER
-    assemble: {
 
+/*
+    assemble: {
       options: {
-        plugins: ['assemble-middleware-permalinks', 'other/plugins/*'],
+        plugins: ['assemble-contrib-permalinks'],
+        permalinks: {
+          preset: 'pretty'
+        },
+        data: ['data/*.{json,yml}'],
         assets: '_src',
-        // plugins: ['permalinks'],
         partials: ['_templates/partials/*.hbs'],
         layout: ['_templates/layouts/index.hbs'],
         ext: '.html'
-        // data: ['data/*.{json,yml}']
       },
-      pages: {
-        expand: true,
-        cwd: '_templates/pages',
-        src: ['*.hbs'],
-        dest: './dist',
+      site: {
+        options: {
+          layout: ['_templates/layouts/index.hbs'],
+          pages: {
+            expand: true,
+            cwd: '_templates/pages',
+            src: ['*.hbs'],
+            dest: './dist',
+          }
+        }
+      },
+
+      blog: {
+        options: {
+          layout: '_templates/layouts/index.hbs',
+          site: {
+            title: 'This is my Blog'
+          },
+          pages: grunt.file.readJSON('_templates/data/pages.json')
+        },
+        files: { 'dest/': ['src/index.hbs'] }
       }
-
-
-
-
     },
+*/
+    assemble: {
+      options: {
+        plugins: ['assemble-contrib-permalinks'],
+        permalinks: {
+          preset: 'pretty'
+        },
+        data: ['data/*.{json,yml}'],
+        assets: '_src',
+        partials: ['_templates/partials/*.hbs'],
+        ext: '.html'
+      },
+      from_template_pages: {
+        options: {
+          flatten: true,
+          layoutdir: '_templates/layouts',
+          layout: 'index.hbs'
+        },
+        // src: ['*.hbs'],
+        //src: ['_templates/pages/*.hbs'],
+        //dest: 'dist/'
+        files: {
+          'dist/': ['_templates/pages/*.hbs']
+        }
+      },
+      from_json_src: {
+        options: {
+          flatten: false,
+          layout: '_templates/layouts/index.hbs',
+          site: {
+            title: 'This is my Blog'
+          },
+          pages: grunt.file.readJSON('_templates/data/pages.json')
+        },
+        files: { 'dist/': ['src/index.hbs'] }
+      }
+    },
+
+
 
     // OPEN WEBSITE IN BROWSER
     open : {

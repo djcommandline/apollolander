@@ -24,7 +24,7 @@
     "load-grunt-tasks": "~0.4.0",
     "time-grunt": "~0.2.10",
     "assemble": "~0.4.37",
-    "assemble-contrib-permalinks": "~0.3.6",
+    "assemble-contrib-permalinks": "^0.3.6",
     "grunt-aws": "~0.3.0",
     "grunt-contrib-clean": "~0.5.0",
     "grunt-contrib-jshint": "~0.6.4",
@@ -40,7 +40,6 @@
     "grunt-open": "~0.2.3",
     "grunt-sed": "~0.1.1",
     "grunt-sync": "0.0.7",
-    "grunt-webfont": "~0.2.0",
-    "assemble-middleware-permalinks": "^0.5.2"
+    "grunt-webfont": "~0.2.0"
   }
 }
