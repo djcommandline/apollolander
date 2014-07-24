@@ -69,7 +69,9 @@ module.exports = function(grunt) {
 
     // STATIC SITE COMPILER
     assemble: {
+
       options: {
+        plugins: ['assemble-middleware-permalinks', 'other/plugins/*'],
         assets: '_src',
         // plugins: ['permalinks'],
         partials: ['_templates/partials/*.hbs'],
@@ -83,6 +85,10 @@ module.exports = function(grunt) {
         src: ['*.hbs'],
         dest: './dist',
       }
+
+
+
+
     },
 
     // OPEN WEBSITE IN BROWSER

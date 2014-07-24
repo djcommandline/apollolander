@@ -40,6 +40,7 @@
     "grunt-open": "~0.2.3",
     "grunt-sed": "~0.1.1",
     "grunt-sync": "0.0.7",
-    "grunt-webfont": "~0.2.0"
+    "grunt-webfont": "~0.2.0",
+    "assemble-middleware-permalinks": "^0.5.2"
   }
 }
