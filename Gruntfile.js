@@ -67,44 +67,6 @@ module.exports = function(grunt) {
       }
     },
 
-
-/*
-    assemble: {
-      options: {
-        plugins: ['assemble-contrib-permalinks'],
-        permalinks: {
-          preset: 'pretty'
-        },
-        data: ['data/*.{json,yml}'],
-        assets: '_src',
-        partials: ['_templates/partials/*.hbs'],
-        layout: ['_templates/layouts/index.hbs'],
-        ext: '.html'
-      },
-      site: {
-        options: {
-          layout: ['_templates/layouts/index.hbs'],
-          pages: {
-            expand: true,
-            cwd: '_templates/pages',
-            src: ['*.hbs'],
-            dest: './dist',
-          }
-        }
-      },
-
-      blog: {
-        options: {
-          layout: '_templates/layouts/index.hbs',
-          site: {
-            title: 'This is my Blog'
-          },
-          pages: grunt.file.readJSON('_templates/data/pages.json')
-        },
-        files: { 'dest/': ['src/index.hbs'] }
-      }
-    },
-*/
     assemble: {
       options: {
         plugins: ['assemble-contrib-permalinks'],
@@ -141,8 +103,6 @@ module.exports = function(grunt) {
         files: { 'dist/': ['src/index.hbs'] }
       }
     },
-
-
 
     // OPEN WEBSITE IN BROWSER
     open : {
