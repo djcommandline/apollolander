@@ -1,0 +1,171 @@
+<html>
+  <head>
+    <title>START LANDER</title>
+
+    <link href="//fonts.googleapis.com/css?family=Oxygen:300,400,700" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=Source+Sans Pro:200italic,200,300italic,300,400italic,400,600italic,600,700italic,700,900italic,900" rel="stylesheet" type="text/css">
+
+
+
+    <style media="screen">
+
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      *, *:before, *:after {
+          -moz-box-sizing: border-box;
+          -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+      }
+
+      body {
+       font-family: "Source Sans Pro";
+      }
+
+      h1, h2, h3, h4, h5, h6 {
+       font-family: "Oxygen";
+      }
+
+      .colors {
+        color: #EF7F59;
+        color: #FBCA7E;
+        color: #4D6395;
+        color: #8EB0CB;
+        color: #BC2745;
+      }
+
+      .clearfix,
+      .cf,
+
+      {
+          zoom:1;
+          &:before, &:after{ content:""; display:table; }
+          &:after{ clear: both; }
+      }
+
+      section {
+        width: 100%;
+        float: left;
+        padding: 10% 0 10% 10%;
+      }
+
+      #overview {
+        background: #EF7F59;
+      }
+
+      #tree {
+        background: #4D6395;
+        color: #fff;
+      }
+
+      #nomenclature {
+        background: #8EB0CB;
+        color: #4D6395;
+      }
+
+      #destroy {
+        background: #BC2745;
+        color: #fff;
+        font-size:  200%;
+      }
+
+      pre {
+        text-align: left;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <section id="hero">
+        <h1>start lander</h1>
+
+        <p>
+          the most dynamic static pages... <br>
+        </p>
+    </section>
+
+    <section id="overview">
+        <h2>
+          method to the madness<br>
+        </h2>
+
+        follow these steps...<br><br>
+
+        <ul>
+          <li>Identify pages & create _templates/pages/page.hbs & scaffold less rules</li>
+          <li>Identify repeated design elements & create _templates/partials/ele_name.hbs & scaffold less rules</li>
+          <li>Identify designed section & create _templates/partials/sec_name.hbs & scaffold less rules</li>
+        </ul>
+    </section>
+
+    <section id="tree">
+
+      <h2>
+        Project Organization
+      </h2>
+
+      <pre>
+
+├── Gruntfile.js       [configure your grunt plugins]
+├── README.md
+├── _src               [source for assets]
+│   ├── css
+│   ├── favi
+│   ├── fonts
+│   ├── icons
+│   ├── img
+│   ├── js
+│   ├── less
+│   └── seo
+├── _templates         [data + markup that produces website]
+│   ├── data           [json objects to populate your pages]
+│   ├── layouts        [create wrapper markup for your pages]
+│   ├── pages          [manage your pages]
+│   └── partials       [create elements and section partials]
+├── design
+│   └── fonts          [store you fonts]
+├── dist               [compiled website from _src + _templates]
+│   ├── assets
+│   ├── index.html
+│   ├── robots.txt
+│   └── sitemap.xml
+├── index.html
+└── package.json
+
+      </pre>
+
+    </section>
+
+
+    <section id="nomenclature">
+
+      <h2>NOMENCLATURE</h2>
+      <p>
+        It's how we know what we are talking about...
+      </p>
+
+      <pre>
+
+        PAGES
+        SECTIONS
+        ELEMENTS
+
+      </pre>
+
+    </section>
+
+
+    <section id="destroy">
+
+      !!! Remove the partial reference in<br>
+      _templates/pages/index.hbs <br>
+      and get started...
+
+    </section>
+
+
+  </body>
+</html>
