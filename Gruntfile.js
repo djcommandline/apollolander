@@ -295,7 +295,7 @@ module.exports = function(grunt) {
       less: {
         files: [
         '_src/less/*.less',
-        '_src/breakpoints/less/*.less',
+        '_src/less/breakpoints/*.less',
         '_src/less/frontendpatterns/*.less',
         '_src/less/frontendpatterns/reset/*.less',
         '_src/less/frontendpatterns/ele/*.less'
