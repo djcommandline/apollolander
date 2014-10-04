@@ -10,7 +10,8 @@ module.exports = function(grunt) {
 
   // LOAD ASSEMBLE
   grunt.loadNpmTasks('assemble');
-
+  // LOAD AUTOPREFIXER
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   //////////////////////////
   ///                      //
@@ -165,7 +166,19 @@ module.exports = function(grunt) {
         recursive: true
       }
     },
-
+    // AUTOPREFIXER FOR CSS
+    autoprefixer: {
+      options: {
+        browsers: ['last 4 versions', 'ie 8', 'ie 9']
+      },
+      files: {
+        expand: true,
+        cwd: '_src/',
+        src: 'css/app.css',
+        dest: '_src/',
+        ext: '.css'
+      }
+    },
     // COPY SRC FILES FOR DISTRIBUTION
     sync: {
       dist: {
@@ -370,6 +383,7 @@ module.exports = function(grunt) {
   'clean',
   'less',
   'sed:mapfile',
+  'autoprefixer',
   'uglify',
   'assemble',
   'sync:dist',
